@@ -9,7 +9,7 @@ function Box(props) {
     const [active, setActive] = useState(false)
     
     useFrame(() => {
-        mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+        mesh.current.rotation.x = mesh.current.rotation.y += 0.05
     })
     return (
         <mesh
