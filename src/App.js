@@ -10,6 +10,7 @@ function Box(props) {
     
     useFrame(() => {
         mesh.current.rotation.x = mesh.current.rotation.y += 0.05
+        
     })
     return (
         <mesh
@@ -20,7 +21,7 @@ function Box(props) {
             onPointerOver={(event) => setHover(true)}
             onPointerOut={(event) => setHover(false)}>
             <boxBufferGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+            <meshStandardMaterial color={hovered ? 'hotpink' : 'red'} />
         </mesh>
     )
 }
@@ -32,6 +33,7 @@ function App() {
       <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
+      <Box position={[1.2, 0, 3]} />
     </Canvas>
   );
 }
